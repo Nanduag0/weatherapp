@@ -18,7 +18,7 @@ weatherform.addEventListener('submit',(e)=>
     messageTwo.textContent=''
     messageThree.textContent=''
     messagefour.textContent=''
-    fetch('http://localhost:3000/weather?address='+location).then((response)=>
+    fetch('/weather?address='+location).then((response)=>
 {
 response.json().then((data)=>
 {
@@ -32,7 +32,7 @@ response.json().then((data)=>
         messageTwo.textContent=data.latitude;
         messageThree.textContent=data.longitude;
        // messagefour.textContent=data.forecast;
-
+      
   /*forecast({latutude,longitude},(error,forecastdata)=>
   {
       if(error)
